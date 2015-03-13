@@ -1,0 +1,5 @@
+---
+# enable sendmail
+- apt: name=sendmail state=present
+- template: src=sendmail.mc dest=/etc/mail/sendmail.mc
+- service: name=sendmail state=restarted enabled=yes
